@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Toki Toki Inventory Management Android</string>
+
+    <string-array name="roles">
+        <item>Manager</item>
+        <item>Supplier</item>
+    </string-array>
+
+
 </resources>
