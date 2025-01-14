@@ -74,7 +74,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="By continuing, you must agree to our  Terms, Privacy Policy, and Cookie Use."
+            android:text="By continuing, you must agree to our Terms, Privacy Policy, and Cookie Use."
             android:gravity="center" />
 
 
@@ -84,6 +84,4 @@
             android:layout_height="match_parent"
             android:background="@android:color/transparent" />
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
