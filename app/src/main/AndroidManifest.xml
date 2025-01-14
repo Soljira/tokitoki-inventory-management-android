@@ -22,7 +22,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".login.LoginActivity"/>
+
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".manager.supplier.SupplierActivity"/>
+        <activity android:name=".manager.recipes.RecipeActivity"/>
+        <activity android:name=".manager.recipes.AddRecipe"/>
+        <activity android:name=".manager.recipes.EditRecipe"/>
+
     </application>
 
 </manifest>

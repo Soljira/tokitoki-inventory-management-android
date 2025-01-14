@@ -1,67 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:layout_marginTop="20dp"
     android:layout_marginStart="20dp"
     android:layout_marginEnd="20dp"
-    android:background="@color/white" >
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Recipes"
+        android:text="Edit Recipe"
         android:textSize="25sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/editDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText"
+        android:layout_marginTop="20dp"
+        android:text="Change Recipe Photo"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/recipeImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/editDesc"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:background="#D9D9D9"
+        android:backgroundTintMode="@null"
+        android:backgroundTint="#D9D9D9"/>
+
+    <TextView
+        android:id="@+id/editRecipeNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recipeImage"
+        android:layout_marginTop="20dp"
+        android:text="Recipe Name"
+        android:textStyle="bold"/>
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/editRecipeNameField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/editRecipeNameText"
         android:layout_centerInParent="true"
-        android:layout_marginTop="30dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Search" />
+        android:text="Wagyu Cubes Maki Bento" />
+
+    <TextView
+        android:id="@+id/ingredientsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editRecipeNameField"
+        android:layout_marginTop="20dp"
+        android:text="Ingredients"
+        android:textStyle="bold"/>
 
     <RelativeLayout
         android:id="@+id/recipe"
-        android:layout_width="250dp"
-        android:layout_height="450dp"
-        android:layout_below="@id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ingredientsText"
         android:layout_marginTop="20dp"
         android:padding="10dp"
         android:background="#f2f2f2">
 
-        <ImageView
-            android:id="@+id/recipeImage"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_centerHorizontal="true"
-            android:background="#D9D9D9"
-            android:backgroundTintMode="@null"
-            android:backgroundTint="#D9D9D9"/>
-
-        <TextView
-            android:id="@+id/recipeName"
+        <Button
+            android:id="@+id/doneBtn2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/recipeImage"
             android:layout_marginTop="10dp"
-            android:text="Wagyu Cubes Maki Bento"
-            android:textStyle="bold"/>
+            android:layout_below="@+id/measurement4"
+            android:text="Add Ingredient" />
 
         <TextView
             android:id="@+id/ingredient"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/recipeName"
-            android:layout_marginTop="10dp"
             android:text="Ingredient"
             android:textStyle="bold"/>
 
@@ -70,8 +92,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_below="@id/recipeName"
-            android:layout_marginTop="10dp"
             android:text="Measurement"
             android:textStyle="bold"/>
 
@@ -137,30 +157,13 @@
             android:layout_below="@id/ingredient3"
             android:text="5 ml"/>
 
-        <Button
-            android:id="@+id/editBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:text="Edit" />
-
-        <Button
-            android:id="@+id/deleteBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:text="Delete" />
-
     </RelativeLayout>
 
     <Button
-        android:id="@+id/addRecipeBtn"
+        android:id="@+id/doneBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/recipe"
-        android:layout_marginTop="20dp"
-        android:text="Add New Recipe" />
-
-
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:text="Done" />
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.example.tokitokiinventorymanagementandroid.login
+package com.example.tokitokiinventorymanagementandroid
 
 import android.content.Intent
 import android.os.Bundle
@@ -16,8 +16,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.firebasetokyo.ManagerActivity
-import com.example.tokitokiinventorymanagementandroid.R
-import com.example.tokitokiinventorymanagementandroid.helpers.SpinnerInitializations
 import com.example.tokitokiinventorymanagementandroid.manager.supplier.SupplierActivity
 
 class LoginActivity : AppCompatActivity() {
