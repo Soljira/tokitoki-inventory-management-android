@@ -58,6 +58,7 @@ dependencies {
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation("com.google.gms:google-services:4.4.2")
+
 //    implementation("io.ktor:ktor-server-core:3.0.3")
 //    implementation("io.ktor:ktor-server-netty:3.0.3")
 }
