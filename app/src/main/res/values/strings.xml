@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Toki Toki Inventory Management Android</string>
+    <string name="back">Go back</string>
+    <string name="sort_by_prompt">Sort By</string>
 
     <string-array name="roles">
         <item>Manager</item>
         <item>Supplier</item>
     </string-array>
-
-
 </resources>
