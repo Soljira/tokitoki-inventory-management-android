@@ -4,76 +4,114 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:layout_marginTop="20dp"
-    android:layout_marginStart="20dp"
-    android:layout_marginEnd="20dp"
-    android:background="@color/white" >
+    tools:context=".manager.recipes.AddRecipe"
+    android:background="#FFFFFF">
 
     <TextView
-        android:id="@+id/editText"
+        android:id="@+id/recipeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:text="Recipes"
         android:textSize="25sp"
-        android:textStyle="bold" />
+        android:fontFamily="@font/switzer_bold"/>
 
-    <EditText
-        android:id="@+id/editTextText"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:theme="@style/Base.Theme.TextInputEditText.Outlined"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
-        android:layout_centerInParent="true"
+        android:layout_below="@+id/recipeText"
         android:layout_marginTop="30dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Search" />
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColorHint="#636363"
+        app:boxBackgroundColor="#fafafa"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeColor="#d9d9d9">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchField"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="10dp"
+            android:hint="Search recipe"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:fontFamily="@font/switzer_regular"
+            android:inputType="text"
+            android:maxLines="1"
+            tools:ignore="HardcodedText" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <RelativeLayout
         android:id="@+id/recipe"
         android:layout_width="250dp"
         android:layout_height="450dp"
-        android:layout_below="@id/editTextText"
+        android:layout_below="@id/searchLayout"
         android:layout_marginTop="20dp"
-        android:padding="10dp"
-        android:background="#f2f2f2">
+        android:layout_marginStart="20dp"
+        android:padding="15dp"
+        android:background="@drawable/bg_recipes">
 
         <ImageView
             android:id="@+id/recipeImage"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_centerHorizontal="true"
-            android:background="#D9D9D9"
+            android:background="@drawable/card_round_corners"
             android:backgroundTintMode="@null"
-            android:backgroundTint="#D9D9D9"/>
+            android:backgroundTint="#FFFFFF"
+            android:src="@drawable/recipe_photo"/>
 
         <TextView
             android:id="@+id/recipeName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/recipeImage"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:text="Wagyu Cubes Maki Bento"
-            android:textStyle="bold"/>
+            android:textSize="18sp"
+            android:fontFamily="@font/switzer_bold"/>
+
+        <RelativeLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/recipeName"
+            android:layout_marginTop="10dp"
+            android:background="#d9d9d9"/>
 
         <TextView
             android:id="@+id/ingredient"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/recipeName"
+            android:layout_below="@id/line1"
             android:layout_marginTop="10dp"
             android:text="Ingredient"
-            android:textStyle="bold"/>
+            android:textSize="15sp"
+            android:fontFamily="@font/switzer_semibold"/>
 
         <TextView
             android:id="@+id/measurement"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_below="@id/recipeName"
+            android:layout_below="@id/line1"
             android:layout_marginTop="10dp"
             android:text="Measurement"
-            android:textStyle="bold"/>
+            android:textSize="15sp"
+            android:fontFamily="@font/switzer_semibold"/>
 
         <TextView
             android:id="@+id/ingredient1"
@@ -81,7 +119,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/ingredient"
             android:layout_marginTop="10dp"
-            android:text="Rice"/>
+            android:text="Rice"
+            android:textColor="#636366"/>
 
         <TextView
             android:id="@+id/measurement1"
@@ -90,14 +129,16 @@
             android:layout_alignParentEnd="true"
             android:layout_below="@id/ingredient"
             android:layout_marginTop="10dp"
-            android:text="1 cup"/>
+            android:text="1 cup"
+            android:textColor="#636366"/>
 
         <TextView
             android:id="@+id/ingredient2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/ingredient1"
-            android:text="Beef"/>
+            android:text="Beef"
+            android:textColor="#636366"/>
 
         <TextView
             android:id="@+id/measurement2"
@@ -105,14 +146,16 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_below="@id/ingredient1"
-            android:text="1 g"/>
+            android:text="1 g"
+            android:textColor="#636366"/>
 
         <TextView
             android:id="@+id/ingredient3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/ingredient2"
-            android:text="Onions"/>
+            android:text="Onions"
+            android:textColor="#636366"/>
 
         <TextView
             android:id="@+id/measurement3"
@@ -120,14 +163,16 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_below="@id/ingredient2"
-            android:text="1 g"/>
+            android:text="1 g"
+            android:textColor="#636366"/>
 
         <TextView
             android:id="@+id/ingredient4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/ingredient3"
-            android:text="Soy Sauce"/>
+            android:text="Soy Sauce"
+            android:textColor="#636366"/>
 
         <TextView
             android:id="@+id/measurement4"
@@ -135,32 +180,66 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_below="@id/ingredient3"
-            android:text="5 ml"/>
+            android:text="5 ml"
+            android:textColor="#636366"/>
 
-        <Button
-            android:id="@+id/editBtn"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/inventoryStatusReportTxt"
             android:layout_alignParentBottom="true"
-            android:text="Edit" />
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:baselineAligned="false">
 
-        <Button
-            android:id="@+id/deleteBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:text="Delete" />
+            <Button
+                android:id="@+id/editBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:letterSpacing="0"
+                android:text="Edit"
+                android:textSize="15sp"
+                android:fontFamily="@font/switzer_semibold"
+                android:background="@drawable/button_round_corners"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/deleteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_weight="1"
+                android:text="Delete"
+                android:textSize="15sp"
+                android:fontFamily="@font/switzer_semibold"
+                android:background="@drawable/button_round_corners"
+                app:backgroundTint="#DC242C" />
+
+        </LinearLayout>
 
     </RelativeLayout>
 
     <Button
         android:id="@+id/addRecipeBtn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@+id/recipe"
-        android:layout_marginTop="20dp"
-        android:text="Add New Recipe" />
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Add New Recipe"
+        android:textSize="15sp"
+        android:fontFamily="@font/switzer_semibold"
+        android:background="@drawable/button_round_corners"
+        app:backgroundTint="@null" />
+
+
 
 
 </RelativeLayout>
