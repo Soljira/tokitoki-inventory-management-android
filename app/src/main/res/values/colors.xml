@@ -5,6 +5,8 @@
     <color name="tokiBlack">#141C24</color>
     <color name="tokiRed">#DC242C</color>
     <color name="tokiGray">#636366</color>
+    <color name="gray">#D3D3D3</color>
+    <color name="lightGray">#F0F0F0</color>
     <color name="toastSuccessBackground">#B3F3C3</color>
     <color name="toastErrorBackground">#FBB3B3</color>
 </resources>
