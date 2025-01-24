@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:layout_marginTop="20dp"
     android:layout_marginStart="20dp"
-    android:layout_marginEnd="20dp">
+    android:layout_marginEnd="20dp"
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/logo"
@@ -273,6 +274,14 @@
             android:layout_below="@id/stockImage1"
             android:layout_marginTop="10dp"
             android:background="#d9d9d9"/>
-    </RelativeLayout>
 
+        <Button
+            android:id="@+id/tempLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Temp Logout"
+            android:layout_marginTop="76dp"
+            android:layout_marginBottom="90dp" />
+    </RelativeLayout>
 </RelativeLayout>

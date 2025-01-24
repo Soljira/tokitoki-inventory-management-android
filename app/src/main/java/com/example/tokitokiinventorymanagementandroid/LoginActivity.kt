@@ -1,9 +1,11 @@
 package com.example.tokitokiinventorymanagementandroid
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
@@ -11,12 +13,16 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.firebasetokyo.ManagerActivity
-import com.example.tokitokiinventorymanagementandroid.manager.supplier.SupplierActivity
+import com.google.android.material.internal.ViewUtils.hideKeyboard
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
+import com.google.firebase.firestore.firestore
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var emailEditText: EditText
@@ -25,18 +31,70 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var loginButton: Button
     private lateinit var emailClearButton: ImageView
     private lateinit var passwordClearButton: ImageView
+    private lateinit var progressBar: ProgressBar
 
-//    val roles = arrayOf("Manager", "Supplier")
+    private lateinit var intentManagerHome: Intent
+    private lateinit var intentSupplierHome: Intent
+
+    private lateinit var auth: FirebaseAuth
+
     lateinit var spinnerLoginType : Spinner
+
+    // TODO: Fix Spinner not being able to pick Manager unless Supplier is picked first
+    // TODO: Add show password
+    public override fun onStart() {
+        super.onStart()
+        auth = Firebase.auth
+
+        /**
+         * Persistent session functionality
+         */
+        // Checks if a user is already signed in
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            Log.d("Auth", "User is signed in: ${currentUser.email}")
+
+            val uid = currentUser.uid
+            Log.d("Auth", "User ID: $uid")
+            val db = Firebase.firestore
+
+            // Gets user's role from Firestore
+            // Note to self: uid in Firestore must be the same uid in Firebase Authentication for
+            // this code snippet to work
+            // Maybe add a registration page (application type where the admin has to approve it)
+            // to lessen the hassle of manually setting up an account
+            db.collection("users").document(uid).get()
+                .addOnSuccessListener { document ->
+                    val role = document?.getString("role")
+                    if (role != null) {
+                        Log.d("Firestore", "Navigating to $role screen")
+                        navigateToUserScreen(role)
+                    } else {
+                        Log.e("Firestore", "Role is missing or document doesn't exist")
+                    }
+                }
+                .addOnFailureListener { exception ->
+                    Log.e("Firestore", "Error fetching user role: ${exception.message}")
+                }
+        } else {
+            Log.d("Auth", "No user is signed in. Staying on login screen.")
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        intentManagerHome = Intent(this,
+            com.example.tokitokiinventorymanagementandroid.manager.home.HomeActivity
+            ::class.java)
+        intentSupplierHome = Intent(this,
+            com.example.tokitokiinventorymanagementandroid.supplier.home.HomeActivity
+            ::class.java)
+
         setContentView(R.layout.login)
 
 //        spinnerLoginType = findViewById(R.id.spinnerLoginType)
 //        SpinnerInitializations.loginSpinner(this, spinnerLoginType)
-
-
 
         initializeViews()
         setupSpinner()
@@ -52,6 +110,7 @@ class LoginActivity : AppCompatActivity() {
         loginButton = findViewById(R.id.loginButton)
         emailClearButton = findViewById(R.id.emailClearButton)
         passwordClearButton = findViewById(R.id.passwordClearButton)
+        progressBar = findViewById(R.id.progressBar)
     }
 
     private fun setupSpinner() {
@@ -97,6 +156,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun setupLoginButton() {
         loginButton.setOnClickListener {
+            progressBar.visibility = View.VISIBLE
             val selectedRole = userTypeSpinner.selectedItem?.toString()
             val email = emailEditText.text.toString().trim()
             val password = passwordEditText.text.toString().trim()
@@ -110,32 +170,30 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("RestrictedApi")
     private fun performLogin(email: String, password: String, userType: String) {
-        when (userType) {
-            "Manager" -> {
-                if (email == "managertest@gmail.com" && password == "password123") {
-                    navigateToUserScreen(userType)
+        hideKeyboard(currentFocus ?: View(this))
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                progressBar.visibility = View.GONE
+                if (task.isSuccessful) {
+                    showToast("Login Successful")
+                    navigateToUserScreen(userType) // Goes to the Main Activity according to user type
+                    finish()
                 } else {
-                    showToast("Invalid Manager credentials")
+                    showToast("Authentication failed.")
                 }
             }
-            "Supplier" -> {
-                if (email == "SupplierY@gmail.com" && password == "Supplier_123qq") {
-                    navigateToUserScreen(userType)
-                } else {
-                    showToast("Invalid Supplier credentials")
-                }
-            }
-        }
     }
 
     private fun navigateToUserScreen(userType: String) {
         val intent = when (userType) {
-            "Supplier" -> Intent(this, SupplierActivity::class.java)
-            "Manager" -> Intent(this, ManagerActivity::class.java)
+            "Supplier" -> intentSupplierHome
+            "Manager" -> intentManagerHome
             else -> null
         }
         intent?.let {
+            println("RANKINE")
             startActivity(it)
             finish()
         }
