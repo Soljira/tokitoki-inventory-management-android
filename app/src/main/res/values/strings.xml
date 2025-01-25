@@ -2,6 +2,10 @@
     <string name="app_name">Toki Toki Inventory Management Android</string>
     <string name="back">Go back</string>
     <string name="sort_by_prompt">Sort By</string>
+    <string name="deliveries">Deliveries</string>
+    <string name="deliveriesnav">deliveriesnav</string>
+    <string name="sortbyic">Sortbyic</string>
+    <string name="order_no_1234">Order No: 1234</string>
 
     <string-array name="roles">
         <item>Manager</item>
