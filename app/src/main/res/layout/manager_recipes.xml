@@ -205,7 +205,7 @@
                 android:textSize="15sp"
                 android:fontFamily="@font/switzer_semibold"
                 android:background="@drawable/button_round_corners"
-                app:backgroundTint="@null" />
+                app:backgroundTint="#141C24" />
 
             <Button
                 android:id="@+id/deleteBtn"
@@ -237,7 +237,7 @@
         android:textSize="15sp"
         android:fontFamily="@font/switzer_semibold"
         android:background="@drawable/button_round_corners"
-        app:backgroundTint="@null" />
+        app:backgroundTint="#141C24" />
 
 
 
