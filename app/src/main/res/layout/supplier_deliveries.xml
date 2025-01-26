@@ -30,6 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/deliveries"
+                android:textColor="@color/tokiBlack"
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -75,65 +76,350 @@
                 android:prompt="Sort by"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/table_bg"
+        android:padding="16dp"
+        android:layout_margin="8dp"
+        android:elevation="4dp"
+        android:clipToPadding="false"
+        android:layout_gravity="center">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="8dp"
-            android:paddingBottom="4dp">
+            android:paddingTop="6dp"
+            android:paddingBottom="2dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingBottom="8dp">
+                android:paddingBottom="6dp">
 
                 <TextView
                     android:id="@+id/deliveries_order_id1234"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="@string/order_no_1234"
-                    android:textStyle="bold"
+                    android:textColor="@color/tokiBlack"
                     android:textSize="16sp"
-                    android:layout_weight="1" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/deliveries_to_receive"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/to_receive"
                     android:textColor="@color/tokiRed"
-                    android:text="To Receive"
-                    android:textStyle="bold"
                     android:textSize="16sp"
-                    android:gravity="end" />
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/supplier_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Supplier"
+                    android:textColor="@color/tokiBlack"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="X"
+                    android:textColor="@color/tokiGray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </TableRow>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/tokiGray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    android:id="@+id/order_quantity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Order/s"
+                    android:textColor="@color/tokiBlack"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="Quantity"
+                    android:textColor="@color/tokiBlack"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/tokiGray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:id="@+id/orderlist1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Carrots"
+                android:textColor="@color/tokiGray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/orderlist2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="10kg"
+                android:textColor="@color/tokiGray"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:id="@+id/orderlist3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Eggplants"
+                android:textColor="@color/tokiGray"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/orderlist4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="10kg"
+                android:textColor="@color/tokiGray"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:id="@+id/orderlist5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tofu"
+                android:textColor="@color/tokiGray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/orderlist6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="10kg"
+                android:textColor="@color/tokiGray"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/table_bg"
+            android:padding="16dp"
+            android:layout_margin="4dp"
+            android:clipToPadding="false"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/deliveries_order_id1235"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/order_id_1235"
+                    android:textColor="@color/tokiBlack"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/to_receive2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="@string/to_receive2"
+                    android:textColor="@color/tokiRed"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    android:id="@+id/supplier_text2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Supplier"
+                    android:textColor="@color/tokiBlack"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="Y"
+                    android:textColor="@color/tokiGray"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
             </LinearLayout>
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="4dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/tokiGray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/order_quantity2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Order/s"
+                        android:textColor="@color/tokiBlack"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/quantity2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="Quantity"
+                        android:textColor="@color/tokiBlack"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/tokiGray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingBottom="8dp">
+                android:paddingBottom="4dp">
 
                 <TextView
-                    android:id="@+id/supplier_text"
+                    android:id="@+id/orderlist1.1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Supplier"
-                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:text="Pork Belly"
+                    android:textColor="@color/tokiGray"
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/x"
+                    android:id="@+id/orderlist2.1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="50kg"
                     android:textColor="@color/tokiGray"
-                    android:text="X"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:gravity="end" />
+                    android:textSize="16sp" />
+
             </LinearLayout>
-        </TableRow>
+
+
+        </LinearLayout>
+
+
+
+
 
 
 

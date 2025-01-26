@@ -6,6 +6,9 @@
     <string name="deliveriesnav">deliveriesnav</string>
     <string name="sortbyic">Sortbyic</string>
     <string name="order_no_1234">Order No: 1234</string>
+    <string name="to_receive">To Receive</string>
+    <string name="order_id_1235">Order ID:1235</string>
+    <string name="to_receive2">To Receive</string>
 
     <string-array name="roles">
         <item>Manager</item>
