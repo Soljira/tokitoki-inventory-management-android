@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:baselineAligned="false">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/back" />
+    
+        <TextView
+        android:id="@+id/addItemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Add Item"
+        android:textSize="25sp"
+        android:textColor="#141C24"
+        android:fontFamily="@font/switzer_bold"/>
+    
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/chooseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Choose Item Photo"
+        android:textSize="15sp"
+        android:textColor="#1E1E1E"
+        android:fontFamily="@font/switzer_semibold"/>
+
+    <ImageView
+        android:id="@+id/stockItemImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/chooseText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="35dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_plus"
+        android:background="@drawable/bg_recipes"
+        android:backgroundTintMode="@null"
+        android:backgroundTint="#f8f8f8"/>
+
+    <TextView
+        android:id="@+id/stockItemIDText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stockItemImage"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Item ID"
+        android:textSize="15sp"
+        android:textColor="#1E1E1E"
+        android:fontFamily="@font/switzer_semibold"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/stockItemIDLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:theme="@style/Base.Theme.TextInputEditText.Outlined"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stockItemIDText"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColorHint="#636363"
+        app:boxBackgroundColor="#f8f8f8"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeColor="#d9d9d9">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/stockItemIDField"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:drawablePadding="10dp"
+        android:hint="Enter the item ID"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:fontFamily="@font/switzer_regular"
+        android:inputType="text"
+        android:maxLines="1"
+        tools:ignore="HardcodedText" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/stockItemNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stockItemIDLayout"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Item Name"
+        android:textSize="15sp"
+        android:textColor="#1E1E1E"
+        android:fontFamily="@font/switzer_semibold"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/stockItemNameLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:theme="@style/Base.Theme.TextInputEditText.Outlined"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stockItemNameText"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColorHint="#636363"
+        app:boxBackgroundColor="#f8f8f8"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeColor="#d9d9d9">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/stockItemNameField"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:drawablePadding="10dp"
+            android:hint="Enter the item name"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:fontFamily="@font/switzer_regular"
+            android:inputType="text"
+            android:maxLines="1"
+            tools:ignore="HardcodedText" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/recipeUsedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stockItemNameLayout"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Recipe/s Used"
+        android:textSize="15sp"
+        android:textColor="#1E1E1E"
+        android:fontFamily="@font/switzer_semibold"/>
+
+    <Spinner
+        android:id="@+id/spinnerRecipeUsed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/recipeUsedText"
+        android:entries="@array/sort_options"
+        android:prompt="@string/sort_by_prompt"
+        android:minHeight="48dp"
+        android:background="@drawable/spinner_border"/>
+
+    <Button
+        android:id="@+id/doneBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Done"
+        android:textSize="15sp"
+        android:fontFamily="@font/switzer_semibold"
+        android:background="@drawable/button_round_corners"
+        app:backgroundTint="#141C24"  />
+</RelativeLayout>
