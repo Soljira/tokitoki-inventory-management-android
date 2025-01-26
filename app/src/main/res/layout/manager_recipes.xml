@@ -7,16 +7,32 @@
     tools:context=".manager.recipes.AddRecipe"
     android:background="#FFFFFF">
 
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:baselineAligned="false">
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_back"
+        android:contentDescription="@string/back" />
+
     <TextView
         android:id="@+id/recipeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
         android:text="Recipes"
         android:textSize="25sp"
         android:fontFamily="@font/switzer_bold"/>
+
+    </LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/searchLayout"
@@ -24,12 +40,12 @@
         android:theme="@style/Base.Theme.TextInputEditText.Outlined"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/recipeText"
+        android:layout_below="@+id/linear"
         android:layout_marginTop="30dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:textColorHint="#636363"
-        app:boxBackgroundColor="#fafafa"
+        app:boxBackgroundColor="#f8f8f8"
         app:boxCornerRadiusTopStart="5dp"
         app:boxCornerRadiusTopEnd="5dp"
         app:boxCornerRadiusBottomStart="5dp"
@@ -79,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/recipeImage"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:text="Wagyu Cubes Maki Bento"
             android:textSize="18sp"
             android:fontFamily="@font/switzer_bold"/>
@@ -184,10 +200,9 @@
             android:textColor="#636366"/>
 
         <LinearLayout
-            android:id="@+id/linear"
+            android:id="@+id/linearBtns"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/inventoryStatusReportTxt"
             android:layout_alignParentBottom="true"
             android:orientation="horizontal"
             android:layout_marginTop="10dp"
@@ -205,7 +220,7 @@
                 android:textSize="15sp"
                 android:fontFamily="@font/switzer_semibold"
                 android:background="@drawable/button_round_corners"
-                app:backgroundTint="@null" />
+                app:backgroundTint="#141C24" />
 
             <Button
                 android:id="@+id/deleteBtn"
@@ -229,15 +244,15 @@
         android:id="@+id/addRecipeBtn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@+id/recipe"
-        android:layout_marginTop="50dp"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:text="Add New Recipe"
         android:textSize="15sp"
         android:fontFamily="@font/switzer_semibold"
         android:background="@drawable/button_round_corners"
-        app:backgroundTint="@null" />
+        app:backgroundTint="#141C24" />
 
 
 
