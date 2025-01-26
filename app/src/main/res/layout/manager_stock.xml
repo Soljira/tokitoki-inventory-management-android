@@ -1,6 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:baselineAligned="false">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/back" />
+
+        <TextView
+            android:id="@+id/stockText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Stock"
+            android:textSize="25sp"
+            android:textColor="#141C24"
+            android:fontFamily="@font/switzer_bold"/>
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinner_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/linear"
+        android:entries="@array/sort_options"
+        android:prompt="@string/sort_by_prompt"
+        android:minHeight="48dp"
+        android:background="@drawable/spinner_border"/>
+
+    <LinearLayout
+        android:id="@+id/linearStock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_sort"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:baselineAligned="false">
+
+        <ImageView
+            android:id="@+id/stockImage"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_below="@+id/editDesc"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/carrots"
+            android:background="@drawable/stock_photo_border"
+            android:backgroundTint="#f8f8f8"/>
+
+        <RelativeLayout
+            android:id="@+id/stockDetails"
+            android:layout_width="0dp"
+            android:layout_height="115dp"
+            android:layout_weight="1"
+            android:background="@drawable/stock_details_border"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/itemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carrots"
+                android:textSize="16sp"
+                android:textColor="#141C24"
+                android:fontFamily="@font/switzer_bold"/>
+
+            <TextView
+                android:id="@+id/itemID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/itemName"
+                android:layout_marginTop="0dp"
+                android:text="Item ID"
+                android:textColor="#636366"
+                android:fontFamily="@font/switzer_medium"/>
+
+            <TextView
+                android:id="@+id/itemIDData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/itemName"
+                android:layout_marginTop="0dp"
+                android:text="22"
+                android:textColor="#636366"
+                android:fontFamily="@font/switzer_regular"/>
+
+            <TextView
+                android:id="@+id/supplierText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/itemIDData"
+                android:layout_marginTop="0dp"
+                android:text="Supplier"
+                android:textColor="#636366"
+                android:fontFamily="@font/switzer_medium"/>
+
+            <TextView
+                android:id="@+id/supplierName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/itemIDData"
+                android:layout_marginTop="0dp"
+                android:text="X"
+                android:textColor="#636366"
+                android:fontFamily="@font/switzer_regular"/>
+
+            <TextView
+                android:id="@+id/quantityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/supplierText"
+                android:layout_marginTop="0dp"
+                android:text="Quantity"
+                android:textColor="#636366"
+                android:fontFamily="@font/switzer_medium"/>
+
+            <TextView
+                android:id="@+id/quantityAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/supplierText"
+                android:layout_marginTop="0dp"
+                android:text="40 kg"
+                android:textColor="#636366"
+                android:fontFamily="@font/switzer_regular"/>
+
+            <TextView
+                android:id="@+id/expirationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quantityText"
+                android:layout_marginTop="0dp"
+                android:text="Expiration Date"
+                android:textColor="#636366"
+                android:fontFamily="@font/switzer_medium"/>
+
+            <TextView
+                android:id="@+id/expirationDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/quantityText"
+                android:layout_marginTop="0dp"
+                android:text="10-22-24"
+                android:textColor="#636366"
+                android:fontFamily="@font/switzer_regular"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/addRecipeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Add Item"
+        android:textSize="15sp"
+        android:fontFamily="@font/switzer_semibold"
+        android:background="@drawable/button_round_corners"
+        app:backgroundTint="#141C24" />
+
+</RelativeLayout>
