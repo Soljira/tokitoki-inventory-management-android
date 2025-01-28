@@ -1,10 +1,56 @@
 <resources>
     <string name="app_name">Toki Toki Inventory Management Android</string>
+    <string name="back">Go back</string>
+    <string name="sort_by_prompt">Sort By</string>
+    <string name="deliveries">Deliveries</string>
+    <string name="deliveriesnav">deliveriesnav</string>
+    <string name="sortbyic">Sortbyic</string>
+    <string name="order_no_1234">Order No: 1234</string>
+    <string name="to_receive">To Receive</string>
+    <string name="order_id_1235">Order ID:1235</string>
+    <string name="to_receive2">To Receive</string>
+    <string name="order_id_1973">Order ID: 1973</string>
+    <string name="order_id_1975">Order ID: 1975</string>
+    <string name="order_id_1974">Order ID: 1974</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="garlic">Garlic</string>
+    <string name="_20kg">20kg</string>
+    <string name="_10_kg">10 kg</string>
+    <string name="_50_kg">50 kg</string>
+    <string name="carrots">Carrots</string>
+    <string name="eggplants">Eggplants</string>
+    <string name="tofu">Tofu</string>
+    <string name="pork_belly">Pork Belly</string>
+    <string name="order_s">Order/s</string>
+    <string name="supplier">Supplier</string>
+    <string name="y">Y</string>
+    <string name="z">Z</string>
+    <string name="quantity">Quantity</string>
+    <string name="x">X</string>
+    <string name="delivered">Delivered</string>
+    <string name="soy_sauce">Soy Sauce</string>
+    <string name="_20_l">20 L</string>
+    <string name="vinegar">Vinegar</string>
+    <string name="a">A</string>
+    <string name="deliveriesnav2">deliveriesnav2</string>
+    <string name="deliveriesnav3">deliveriesnav3</string>
+    <string name="order_id_1989">Order ID: 1989</string>
+    <string name="order_id_1976">Order ID: 1976</string>
+    <string name="add_supplier">Add Supplier</string>
+    <string name="supplier_s_id">Supplier\'s ID</string>
+    <string name="enter_supplier_s_id">Enter Supplier\'s ID</string>
+    <string name="supplier_s_name">Supplier\'s Name</string>
+    <string name="enter_supplier_name">Enter Supplier Name</string>
+    <string name="contact_info">Contact Info</string>
+    <string name="enter_email_address">Enter Email Address</string>
+    <string name="enter_phone_number">Enter phone number</string>
+    <string name="location">Location</string>
+    <string name="address_line_1">Address Line 1</string>
+    <string name="address_line_2">Address Line 2</string>
+
 
     <string-array name="roles">
         <item>Manager</item>
         <item>Supplier</item>
     </string-array>
-
-
 </resources>

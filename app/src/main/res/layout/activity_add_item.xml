@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white" >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
 
     <LinearLayout
         android:id="@+id/linear"
@@ -22,11 +23,11 @@
             android:contentDescription="@string/back" />
     
         <TextView
-        android:id="@+id/editText"
+        android:id="@+id/addItemText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:text="New Recipe"
+        android:text="Add Item"
         android:textSize="25sp"
         android:textColor="#141C24"
         android:fontFamily="@font/switzer_bold"/>
@@ -34,23 +35,23 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/editDesc"
+        android:id="@+id/chooseText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/linear"
         android:layout_marginTop="30dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:text="Choose Recipe Photo"
+        android:text="Choose Item Photo"
         android:textSize="15sp"
         android:textColor="#1E1E1E"
         android:fontFamily="@font/switzer_semibold"/>
 
     <ImageView
-        android:id="@+id/recipeImage"
+        android:id="@+id/stockItemImage"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_below="@+id/editDesc"
+        android:layout_below="@+id/chooseText"
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
@@ -63,25 +64,25 @@
         android:backgroundTint="#f8f8f8"/>
 
     <TextView
-        android:id="@+id/editRecipeNameText"
+        android:id="@+id/stockItemIDText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/recipeImage"
+        android:layout_below="@id/stockItemImage"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:text="Recipe Name"
+        android:text="Item ID"
         android:textSize="15sp"
         android:textColor="#1E1E1E"
         android:fontFamily="@font/switzer_semibold"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editRecipeNameLayout"
+        android:id="@+id/stockItemIDLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:theme="@style/Base.Theme.TextInputEditText.Outlined"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editRecipeNameText"
+        android:layout_below="@+id/stockItemIDText"
         android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
@@ -95,12 +96,12 @@
         app:boxStrokeColor="#d9d9d9">
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/editRecipeNameField"
+        android:id="@+id/stockItemIDField"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:padding="10dp"
         android:drawablePadding="10dp"
-        android:hint="Enter recipe name"
+        android:hint="Enter the item ID"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:fontFamily="@font/switzer_regular"
@@ -111,100 +112,78 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/ingredientsText"
+        android:id="@+id/stockItemNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editRecipeNameLayout"
+        android:layout_below="@id/stockItemIDLayout"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:text="Ingredients"
+        android:text="Item Name"
         android:textSize="15sp"
         android:textColor="#1E1E1E"
         android:fontFamily="@font/switzer_semibold"/>
 
-    <RelativeLayout
-        android:id="@+id/recipe"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/stockItemNameLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:theme="@style/Base.Theme.TextInputEditText.Outlined"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ingredientsText"
+        android:layout_below="@+id/stockItemNameText"
         android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@drawable/card_round_corners">
+        android:textColorHint="#636363"
+        app:boxBackgroundColor="#f8f8f8"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeColor="#d9d9d9">
 
-        <TableLayout
-            android:id="@+id/table"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/stockItemNameField"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:stretchColumns="*">
-
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Item"
-                    android:textSize="15sp"
-                    android:textColor="#FFF"
-                    android:fontFamily="@font/switzer_semibold"
-                    android:padding="10dp"
-                    android:background="@drawable/table_border"
-                    android:backgroundTint="#DC242C"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Measurement"
-                    android:textSize="15sp"
-                    android:textColor="#FFF"
-                    android:fontFamily="@font/switzer_semibold"
-                    android:padding="10dp"
-                    android:background="@drawable/table_border"
-                    android:backgroundTint="#DC242C" />
-            </TableRow>
-
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Item 1"
-                    android:textSize="15sp"
-                    android:textColor="#1E1E1E"
-                    android:fontFamily="@font/switzer_regular"
-                    android:padding="10dp"
-                    android:background="@drawable/table_border" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:textSize="15sp"
-                    android:textColor="#1E1E1E"
-                    android:fontFamily="@font/switzer_regular"
-                    android:padding="10dp"
-                    android:background="@drawable/table_border"   />
-            </TableRow>
-
-        </TableLayout>
-
-
-        <Button
-            android:id="@+id/doneBtn2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/table"
-            android:drawableLeft="@drawable/ic_plus"
-            android:drawableTint="@color/white"
-            android:text="Add Ingredient"
-            android:textAlignment="textStart"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:drawablePadding="10dp"
+            android:hint="Enter the item name"
+            android:textColor="@color/black"
             android:textSize="15sp"
-            android:fontFamily="@font/switzer_semibold"
-            android:background="@drawable/button_round_corners"
-            app:backgroundTint="#141C24"/>
+            android:fontFamily="@font/switzer_regular"
+            android:inputType="text"
+            android:maxLines="1"
+            tools:ignore="HardcodedText" />
 
-    </RelativeLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/recipeUsedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stockItemNameLayout"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Recipe/s Used"
+        android:textSize="15sp"
+        android:textColor="#1E1E1E"
+        android:fontFamily="@font/switzer_semibold"/>
 
+    <Spinner
+        android:id="@+id/spinnerRecipeUsed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/recipeUsedText"
+        android:entries="@array/sort_options"
+        android:prompt="@string/sort_by_prompt"
+        android:minHeight="48dp"
+        android:background="@drawable/spinner_border"/>
 
     <Button
         android:id="@+id/doneBtn"

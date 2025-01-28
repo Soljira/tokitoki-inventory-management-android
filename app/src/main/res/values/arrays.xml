@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sort_options">
+        <item>Sort by Time</item>
+        <item>Sort by Order Number</item>
+    </string-array>
+</resources>

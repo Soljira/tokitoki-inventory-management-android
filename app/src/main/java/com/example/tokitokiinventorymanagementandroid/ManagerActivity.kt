@@ -1,4 +1,4 @@
-package com.example.firebasetokyo
+package com.example.tokitokiinventorymanagementandroid;
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -15,7 +15,7 @@ class ManagerActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_manager)
+        setContentView(R.layout.manager_home)
 
 //        auth = FirebaseAuth.getInstance()
 

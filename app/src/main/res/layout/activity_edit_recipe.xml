@@ -1,39 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="20dp"
-    android:layout_marginStart="20dp"
-    android:layout_marginEnd="20dp"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:baselineAligned="false">
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_back"
+        android:contentDescription="@string/back" />
 
     <TextView
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:text="Edit Recipe"
         android:textSize="25sp"
-        android:textStyle="bold"/>
+        android:textColor="#141C24"
+        android:fontFamily="@font/switzer_bold"/>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/editDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editText"
+        android:layout_below="@id/linear"
         android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:text="Change Recipe Photo"
-        android:textStyle="bold"/>
+        android:textSize="15sp"
+        android:textColor="#1E1E1E"
+        android:fontFamily="@font/switzer_semibold"/>
 
     <ImageView
         android:id="@+id/recipeImage"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_below="@+id/editDesc"
+        android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="5dp"
         android:layout_centerHorizontal="true"
-        android:background="#D9D9D9"
+        android:src="@drawable/recipe_photo"
+        android:background="@drawable/bg_recipes"
         android:backgroundTintMode="@null"
-        android:backgroundTint="#D9D9D9"/>
+        android:backgroundTint="#f8f8f8"/>
 
     <TextView
         android:id="@+id/editRecipeNameText"
@@ -41,121 +69,206 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/recipeImage"
         android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:text="Recipe Name"
-        android:textStyle="bold"/>
+        android:textSize="15sp"
+        android:textColor="#1E1E1E"
+        android:fontFamily="@font/switzer_semibold"/>
 
-    <EditText
-        android:id="@+id/editRecipeNameField"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editRecipeNameLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:theme="@style/Base.Theme.TextInputEditText.Outlined"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editRecipeNameText"
-        android:layout_centerInParent="true"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Wagyu Cubes Maki Bento" />
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColorHint="#636363"
+        app:boxBackgroundColor="#f8f8f8"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeColor="#d9d9d9">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editRecipeNameField"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:drawablePadding="10dp"
+            android:hint="Wagyu Cubes Maki Bento"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:fontFamily="@font/switzer_regular"
+            android:inputType="text"
+            android:maxLines="1"
+            tools:ignore="HardcodedText" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/ingredientsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editRecipeNameField"
+        android:layout_below="@id/editRecipeNameLayout"
         android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:text="Ingredients"
-        android:textStyle="bold"/>
+        android:textSize="15sp"
+        android:textColor="#1E1E1E"
+        android:fontFamily="@font/switzer_semibold"/>
 
     <RelativeLayout
         android:id="@+id/recipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/ingredientsText"
-        android:layout_marginTop="20dp"
-        android:padding="10dp"
-        android:background="#f2f2f2">
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/card_round_corners">
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Item"
+                    android:textSize="15sp"
+                    android:textColor="#FFF"
+                    android:fontFamily="@font/switzer_semibold"
+                    android:padding="10dp"
+                    android:background="@drawable/table_border"
+                    android:backgroundTint="#DC242C"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Measurement"
+                    android:textSize="15sp"
+                    android:textColor="#FFF"
+                    android:fontFamily="@font/switzer_semibold"
+                    android:padding="10dp"
+                    android:background="@drawable/table_border"
+                    android:backgroundTint="#DC242C" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rice"
+                    android:textSize="15sp"
+                    android:textColor="#1E1E1E"
+                    android:fontFamily="@font/switzer_regular"
+                    android:padding="10dp"
+                    android:background="@drawable/table_border" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 Cup"
+                    android:textSize="15sp"
+                    android:textColor="#1E1E1E"
+                    android:fontFamily="@font/switzer_regular"
+                    android:padding="10dp"
+                    android:background="@drawable/table_border"   />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Beef"
+                    android:textSize="15sp"
+                    android:textColor="#1E1E1E"
+                    android:fontFamily="@font/switzer_regular"
+                    android:padding="10dp"
+                    android:background="@drawable/table_border" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5 g"
+                    android:textSize="15sp"
+                    android:textColor="#1E1E1E"
+                    android:fontFamily="@font/switzer_regular"
+                    android:padding="10dp"
+                    android:background="@drawable/table_border"   />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Onions"
+                    android:textSize="15sp"
+                    android:textColor="#1E1E1E"
+                    android:fontFamily="@font/switzer_regular"
+                    android:padding="10dp"
+                    android:background="@drawable/table_border" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 g"
+                    android:textSize="15sp"
+                    android:textColor="#1E1E1E"
+                    android:fontFamily="@font/switzer_regular"
+                    android:padding="10dp"
+                    android:background="@drawable/table_border"   />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Soy Sauce"
+                    android:textSize="15sp"
+                    android:textColor="#1E1E1E"
+                    android:fontFamily="@font/switzer_regular"
+                    android:padding="10dp"
+                    android:background="@drawable/table_border" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 ml"
+                    android:textSize="15sp"
+                    android:textColor="#1E1E1E"
+                    android:fontFamily="@font/switzer_regular"
+                    android:padding="10dp"
+                    android:background="@drawable/table_border"   />
+            </TableRow>
+
+        </TableLayout>
 
         <Button
             android:id="@+id/doneBtn2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/measurement4"
-            android:text="Add Ingredient" />
+            android:layout_below="@+id/table"
+            android:drawableLeft="@drawable/ic_plus"
+            android:drawableTint="@color/white"
+            android:text="Add Ingredient"
+            android:textAlignment="textStart"
+            android:textSize="15sp"
+            android:fontFamily="@font/switzer_semibold"
+            android:background="@drawable/button_round_corners"
+            app:backgroundTint="#141C24"/>
 
-        <TextView
-            android:id="@+id/ingredient"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ingredient"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/measurement"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:text="Measurement"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/ingredient1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ingredient"
-            android:layout_marginTop="10dp"
-            android:text="Rice"/>
-
-        <TextView
-            android:id="@+id/measurement1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@id/ingredient"
-            android:layout_marginTop="10dp"
-            android:text="1 cup"/>
-
-        <TextView
-            android:id="@+id/ingredient2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ingredient1"
-            android:text="Beef"/>
-
-        <TextView
-            android:id="@+id/measurement2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@id/ingredient1"
-            android:text="1 g"/>
-
-        <TextView
-            android:id="@+id/ingredient3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ingredient2"
-            android:text="Onions"/>
-
-        <TextView
-            android:id="@+id/measurement3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@id/ingredient2"
-            android:text="1 g"/>
-
-        <TextView
-            android:id="@+id/ingredient4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ingredient3"
-            android:text="Soy Sauce"/>
-
-        <TextView
-            android:id="@+id/measurement4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@id/ingredient3"
-            android:text="5 ml"/>
 
     </RelativeLayout>
 
@@ -164,6 +277,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:text="Done" />
+        android:text="Done"
+        android:textSize="15sp"
+        android:fontFamily="@font/switzer_semibold"
+        android:background="@drawable/button_round_corners"
+        app:backgroundTint="#141C24"  />
 </RelativeLayout>

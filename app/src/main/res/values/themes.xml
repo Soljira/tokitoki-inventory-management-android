@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.TokiTokiInventoryManagementAndroid" parent="Base.Theme.TokiTokiInventoryManagementAndroid" />
+
+    <style name="Theme.MediBook" parent="Base.Theme.TokiTokiInventoryManagementAndroid" />
+    <style name="Base.Theme.TextInputEditText.Outlined" parent="">
+        <item name="colorPrimary">#d9d9d9</item>
+        <item name="android:statusBarColor">#d9d9d9</item>
+    </style>
 </resources>
