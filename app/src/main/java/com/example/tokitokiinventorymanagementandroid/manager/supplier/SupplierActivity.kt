@@ -7,6 +7,6 @@ import com.example.tokitokiinventorymanagementandroid.R
 class SupplierActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.manager_supplier)
+        setContentView(R.layout.manager_supplier_status_overview)
     }
 }

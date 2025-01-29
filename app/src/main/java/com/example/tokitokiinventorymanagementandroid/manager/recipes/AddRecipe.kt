@@ -7,7 +7,7 @@ import com.example.tokitokiinventorymanagementandroid.R
 class AddRecipe : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_recipe)
+        setContentView(R.layout.manager_recipe_recipe_maker)
 
     }
 

@@ -9,7 +9,7 @@ import com.example.tokitokiinventorymanagementandroid.R
 class RecipeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.manager_recipes)
+        setContentView(R.layout.manager_recipe_overview)
 
         val btnAddRecipe = findViewById<Button>(R.id.addRecipeBtn)
         val btnEditRecipe = findViewById<Button>(R.id.editBtn)
