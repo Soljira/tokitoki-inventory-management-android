@@ -29,6 +29,8 @@
         <activity android:name=".ManagerActivity" />
 <!--        <activity android:name=".auth.FirebaseUIActivity"/>-->
         <activity android:name=".manager.home.HomeActivity" />
+        <activity android:name=".manager.stock.StockActivity" />
+        <activity android:name=".manager.orders.OrdersActivity" />
         <activity android:name=".manager.supplier.SupplierActivity"/>
         <activity android:name=".manager.recipes.RecipeActivity"/>
         <activity android:name=".manager.recipes.AddRecipe"/>
