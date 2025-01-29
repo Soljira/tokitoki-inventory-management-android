@@ -7,13 +7,24 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tokitokiinventorymanagementandroid.LoginActivity
 import com.example.tokitokiinventorymanagementandroid.R
+import com.example.tokitokiinventorymanagementandroid.helpers.BottomNavigationInitialization
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.Firebase
 import com.google.firebase.auth.auth
 
 class HomeActivity : AppCompatActivity() {
+
+    lateinit var bottomNavigationView: BottomNavigationView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.manager_home)
+
+        // Bottom Navigation Bar DO NOT TOUCH
+        bottomNavigationView = findViewById(R.id.bottomNavigationView)
+        BottomNavigationInitialization.setupBottomNavigation(this, bottomNavigationView)
+        bottomNavigationView.selectedItemId = R.id.navbar_manager_home
+
 
         // TODO: Turn these authentication code into a helper class
         val auth = Firebase.auth
@@ -32,5 +43,10 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        bottomNavigationView.selectedItemId = R.id.navbar_manager_home
     }
 }
