@@ -10,4 +10,20 @@
 
     <style name="MySuperAppTheme"></style>
 
+    <style name="BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="menu">@menu/manager_bottom_nav</item>
+        <item name="itemIconSize">30dp</item>
+        <item name="itemPaddingTop">4dp</item>
+        <item name="itemPaddingBottom">4dp</item>
+        <item name="itemHorizontalTranslationEnabled">false</item>
+        <item name="itemBackground">@color/white</item>
+        <item name="itemIconTint">@color/navbar_icon_colors</item>
+        <item name="itemTextColor">@color/navbar_icon_colors</item>
+        <item name="itemActiveIndicatorStyle">@style/ShapeAppearance.Material3.Corner.None</item>
+        <item name="itemRippleColor">@color/tokiRed</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="elevation">8dp</item>
+    </style>
+
+
 </resources>

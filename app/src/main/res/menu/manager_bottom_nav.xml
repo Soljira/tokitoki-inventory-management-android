@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Home"
+        android:id="@+id/navbar_manager_home"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:title="Stock"
+        android:id="@+id/navbar_manager_stock"
+        android:icon="@drawable/ic_stock"/>
+    <item
+        android:title="Order"
+        android:id="@+id/navbar_manager_orders"
+        android:icon="@drawable/ic_orders"/>
+    <item
+        android:title="Supplier"
+        android:id="@+id/navbar_manager_supplier"
+        android:icon="@drawable/ic_supplier"/>
+    <item
+        android:title="Recipe"
+        android:id="@+id/navbar_manager_recipe"
+        android:icon="@drawable/ic_recipes"/>
+
+</menu>
