@@ -45,7 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:entries="@array/sort_options"
+                android:entries="@array/sort_options_orders_customer_orders"
                 android:prompt="@string/sort_by_prompt"
                 android:minHeight="48dp" />
 

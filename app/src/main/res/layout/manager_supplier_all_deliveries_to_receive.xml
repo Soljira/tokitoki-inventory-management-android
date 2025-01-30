@@ -71,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:entries="@array/sort_options"
+                android:entries="@array/sort_options_supplier_all_deliveries"
                 android:minHeight="48dp"
                 android:prompt="@string/sort_by_prompt"
                 tools:ignore="TouchTargetSizeCheck" />

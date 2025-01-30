@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.tokitokiinventorymanagementandroid.LoginActivity
 import com.example.tokitokiinventorymanagementandroid.R
 import com.example.tokitokiinventorymanagementandroid.helpers.BottomNavigationInitialization
+import com.example.tokitokiinventorymanagementandroid.manager.TestRequest
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.Firebase
 import com.google.firebase.auth.auth
@@ -30,6 +31,10 @@ class HomeActivity : AppCompatActivity() {
         val auth = Firebase.auth
         val tempLogout = findViewById<Button>(R.id.tempLogout)
         val user = auth.currentUser
+
+        // Testing real-time data syncing here
+//        startActivity(Intent(this, TestRequest::class.java))
+
 
         // Extra measure to make sure the app goes to login screen if there is no user logged in
         if (user == null) {

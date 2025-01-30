@@ -16,6 +16,7 @@
         android:baselineAligned="false">
 
         <ImageView
+            android:id="@+id/btnBack"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="20dp"
@@ -141,6 +142,7 @@
             android:layout_alignParentStart="true"
             android:text="Recipe Used"
             android:textSize="12sp"
+            android:textColor="@color/white"
             android:fontFamily="@font/switzer_semibold"
             android:background="@drawable/button_round_corners"
             app:backgroundTint="#DC242C" />
