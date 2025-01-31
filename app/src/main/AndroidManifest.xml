@@ -44,8 +44,10 @@
         <activity android:name=".manager.stock.StockSelectedInventoryItem" />
 
         <activity android:name=".manager.orders.OrdersActivity" />
+        <activity android:name=".manager.orders.OrdersCustomerOrderDetails" />
 
         <activity android:name=".manager.supplier.SupplierActivity"/>
+        <activity android:name=".manager.supplier.SupplierAllDeliveries"/>
 
         <activity android:name=".manager.recipes.RecipeActivity"/>
         <activity android:name=".manager.recipes.AddRecipe"/>
