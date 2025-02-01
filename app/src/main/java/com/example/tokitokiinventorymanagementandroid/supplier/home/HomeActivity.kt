@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.tokitokiinventorymanagementandroid.LoginActivity
 //import com.google.firebase.auth.FirebaseAuth
 import com.example.tokitokiinventorymanagementandroid.R
-import com.example.tokitokiinventorymanagementandroid.supplier.TestReceive
 import com.google.firebase.Firebase
 import com.google.firebase.auth.auth
 
@@ -21,9 +20,6 @@ class HomeActivity : AppCompatActivity() {
         val auth = Firebase.auth
         val tempLogout = findViewById<Button>(R.id.tempLogout)
         val user = auth.currentUser
-
-        // Testing real-time data syncing here
-        startActivity(Intent(this, TestReceive::class.java))
 
         // Extra measure to make sure the app goes to login screen if there is no user logged in
         if (user == null) {

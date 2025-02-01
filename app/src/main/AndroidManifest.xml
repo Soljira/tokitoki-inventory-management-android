@@ -37,6 +37,8 @@
 
         <activity android:name=".MainActivity" />
         <activity android:name=".ManagerActivity" />
+<!--        <activity android:name=".auth.FirebaseUIActivity"/>-->
+
         <activity android:name=".manager.home.HomeActivity" />
 
         <activity android:name=".manager.stock.StockActivity" />
@@ -53,13 +55,7 @@
         <activity android:name=".manager.recipes.AddRecipe"/>
         <activity android:name=".manager.recipes.EditRecipe"/>
 
-
-
         <activity android:name=".supplier.home.HomeActivity" />
-
-        <activity android:name=".manager.TestRequest" />
-        <activity android:name=".supplier.TestReceive" />
-
 
     </application>
 
