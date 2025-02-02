@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/branch_urdneta"
+        android:title="SM City Urdaneta Central" />
+    <item
+        android:id="@+id/branch_dagupan"
+        android:title="CSI City Mall Dagupan" />
+    <item
+        android:id="@+id/branch_launion"
+        android:title="CSI City Mall La Union" />
+</menu>
