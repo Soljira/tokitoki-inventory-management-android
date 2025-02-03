@@ -47,6 +47,14 @@
     <string name="location">Location</string>
     <string name="address_line_1">Address Line 1</string>
     <string name="address_line_2">Address Line 2</string>
+    <string name="date">Date</string>
+    <string name="tokyologo">tokyologo</string>
+    <string name="branch">Branch</string>
+    <string name="dagupan">Dagupan</string>
+    <string name="_2400_arellano_street_dagupan_city_pangasinan">2400, Arellano Street, Dagupan City, Pangasinan</string>
+    <string name="date_placed">Date Placed</string>
+    <string name="is_on_its_way">is on its way</string>
+    <string name="order_1357">Order #1357</string>
 
 
     <string-array name="roles">

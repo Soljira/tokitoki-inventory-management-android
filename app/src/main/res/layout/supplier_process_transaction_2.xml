@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!--PROMISE BUKAS DIN FUNCTION NETO SA SCHOOL !-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="61dp"
+            android:layout_height="61dp"
+            android:contentDescription="Delivery Truck Icon"
+            android:src="@drawable/ic_delivery_truck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_1357"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingTop="8dp"
+            android:textColor="@color/tokiBlack"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/is_on_its_way"
+            android:textSize="16sp"
+            android:textColor="@color/tokiGray"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="24dp"
+        android:paddingHorizontal="12dp">
+
+        <Button
+            android:id="@+id/remove_request_button"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#141C24"
+            android:text="Done"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>
