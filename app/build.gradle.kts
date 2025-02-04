@@ -54,10 +54,14 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+//    implementation(libs.androidx.library)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+
+    implementation("androidx.databinding:databinding-runtime:8.8.0")
+    implementation("androidx.databinding:databinding-common:8.8.0")
 
     /* Firebase stuff */
     implementation(platform("com.google.firebase:firebase-bom:33.8.0"))  // Import the Firebase BoM (Bill of Materials)
@@ -73,4 +77,11 @@ dependencies {
 
 //    implementation("io.ktor:ktor-server-core:3.0.3")
 //    implementation("io.ktor:ktor-server-netty:3.0.3")
+}
+
+configurations.all {
+    resolutionStrategy {
+        force("androidx.databinding:databinding-runtime:8.8.0")
+        force("androidx.databinding:databinding-common:8.8.0")
+    }
 }

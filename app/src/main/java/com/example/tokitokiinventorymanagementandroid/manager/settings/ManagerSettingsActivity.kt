@@ -1,4 +1,4 @@
-/* (eto yung nasa mainactivity ko) package com.example.tokistokis
+package com.example.tokitokiinventorymanagementandroid.manager.settings
 
 import android.os.Bundle
 import android.view.View
@@ -9,8 +9,9 @@ import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.tokitokiinventorymanagementandroid.R
 
-class MainActivity : AppCompatActivity() {
+class ManagerSettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.manager_account)
@@ -92,5 +93,3 @@ class MainActivity : AppCompatActivity() {
     }
 
 }
-
- */

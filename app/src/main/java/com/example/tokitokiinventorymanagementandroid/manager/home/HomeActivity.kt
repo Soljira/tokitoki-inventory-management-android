@@ -13,6 +13,7 @@ import com.example.tokitokiinventorymanagementandroid.R
 import com.example.tokitokiinventorymanagementandroid.helpers.BottomNavigationInitialization
 import com.example.tokitokiinventorymanagementandroid.manager.TestRequest
 import com.example.tokitokiinventorymanagementandroid.manager.orders.OrdersCustomerOrderDetails
+import com.example.tokitokiinventorymanagementandroid.manager.settings.ManagerSettingsActivity
 import com.example.tokitokiinventorymanagementandroid.manager.stock.StockActivity
 import com.example.tokitokiinventorymanagementandroid.manager.supplier.SupplierActivity
 import com.example.tokitokiinventorymanagementandroid.manager.supplier.SupplierAllDeliveries
@@ -42,8 +43,10 @@ class HomeActivity : AppCompatActivity() {
 
         // TODO: Turn these authentication code into a helper class
         val auth = Firebase.auth
-        val tempLogout = findViewById<Button>(R.id.tempLogout)
         val user = auth.currentUser
+
+        val tempLogout = findViewById<Button>(R.id.tempLogout)
+        val btnProfile = findViewById<ImageView>(R.id.profileBtn)
 
         // Testing real-time data syncing here
 //        startActivity(Intent(this, TestRequest::class.java))
@@ -59,6 +62,10 @@ class HomeActivity : AppCompatActivity() {
             Firebase.auth.signOut()
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
+        }
+
+        btnProfile.setOnClickListener {
+            startActivity(Intent(this, ManagerSettingsActivity::class.java))
         }
 
 
