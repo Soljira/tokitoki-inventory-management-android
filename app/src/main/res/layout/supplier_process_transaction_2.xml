@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@color/white">
 
-    <!--PROMISE BUKAS DIN FUNCTION NETO SA SCHOOL !-->
+
 
 
     <LinearLayout
@@ -20,7 +20,7 @@
         <ImageView
             android:layout_width="61dp"
             android:layout_height="61dp"
-            android:contentDescription="Delivery Truck Icon"
+            android:contentDescription="@string/delivery_truck_icon"
             android:src="@drawable/ic_delivery_truck" />
 
         <TextView
