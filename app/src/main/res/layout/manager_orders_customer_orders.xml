@@ -36,6 +36,7 @@
                     android:layout_height="wrap_content"
                     android:text="Orders"
                     android:textSize="20sp"
+                    android:textColor="#141C24"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -45,12 +46,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:entries="@array/sort_options"
+                android:entries="@array/sort_options_orders_customer_orders"
                 android:prompt="@string/sort_by_prompt"
                 android:minHeight="48dp" />
 
 
             <LinearLayout
+                android:id="@+id/orderItem0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -72,6 +74,7 @@
                         android:text="Order No: 1234"
                         android:textStyle="bold"
                         android:textSize="16sp"
+                        android:textColor="#141C24"
                         android:layout_weight="1" />
                 </LinearLayout>
 
@@ -88,8 +91,16 @@
                             android:id="@+id/tv_time_ordered_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Time Ordered: 13:20 PM"
+                            android:text="Time Ordered"
+                            android:textColor="#1E1E1E"
                             android:textSize="14sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="13:20 PM"
+                            android:textColor="#636366"
+                            android:textSize="14sp"
+                            android:gravity="end" />
                     </TableRow>
 
                     <TableRow
@@ -100,6 +111,7 @@
                             android:layout_height="wrap_content"
                             android:text="Order/s"
                             android:textStyle="bold"
+                            android:textColor="#1E1E1E"
                             android:textSize="14sp" />
 
                         <TextView
@@ -108,6 +120,7 @@
                             android:text="Quantity"
                             android:gravity="end"
                             android:textStyle="bold"
+                            android:textColor="#1E1E1E"
                             android:textSize="14sp" />
                     </TableRow>
 
@@ -118,12 +131,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Chicken Oyakodon Supreme"
+                            android:textColor="#636366"
                             android:textSize="14sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x5"
+                            android:textColor="#636366"
                             android:gravity="end"
                             android:textSize="14sp" />
                     </TableRow>
@@ -134,11 +149,22 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Special Request: No Chicken"
+                            android:text="Special Request"
                             android:paddingTop="4dp"
                             android:paddingBottom="4dp"
                             android:textSize="12sp"
-                            android:textColor="#777777" />
+                            android:textStyle="bold"
+                            android:textColor="#1E1E1E" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No Chicken"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:gravity="end"
+                            android:textSize="12sp"
+                            android:textColor="#636366" />
                     </TableRow>
 
                     <TableRow
@@ -148,6 +174,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Pork Katsudon"
+                            android:textColor="#636366"
                             android:textSize="14sp" />
 
                         <TextView
@@ -155,6 +182,7 @@
                             android:layout_height="wrap_content"
                             android:text="x1"
                             android:gravity="end"
+                            android:textColor="#636366"
                             android:textSize="14sp" />
                     </TableRow>
 
@@ -165,6 +193,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Red Ice Tea"
+                            android:textColor="#636366"
                             android:textSize="14sp" />
 
                         <TextView
@@ -172,6 +201,7 @@
                             android:layout_height="wrap_content"
                             android:text="x1"
                             android:gravity="end"
+                            android:textColor="#636366"
                             android:textSize="14sp" />
                     </TableRow>
 
@@ -181,17 +211,28 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Special Request: No Ice"
+                            android:text="Special Request"
                             android:paddingTop="4dp"
                             android:paddingBottom="4dp"
                             android:textSize="12sp"
-                            android:textColor="#777777" />
+                            android:textStyle="bold"
+                            android:textColor="#1E1E1E" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No Ice"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:textSize="12sp"
+                            android:gravity="end"
+                            android:textColor="#636366" />
                     </TableRow>
                 </TableLayout>
             </LinearLayout>
 
             <!-- Second Order Section -->
             <LinearLayout
+                android:id="@+id/orderItem1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -213,6 +254,7 @@
                         android:text="Order No: 1235"
                         android:textStyle="bold"
                         android:textSize="16sp"
+                        android:textColor="#141C24"
                         android:layout_weight="1" />
                 </LinearLayout>
 
@@ -230,7 +272,16 @@
                             android:id="@+id/tv_time_ordered_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Time Ordered: 13:20 PM"
+                            android:text="Time Ordered"
+                            android:textColor="#1E1E1E"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="13:20 PM"
+                            android:gravity="end"
+                            android:textColor="#636366"
                             android:textSize="14sp" />
                     </TableRow>
 
@@ -241,6 +292,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Order/s"
+                            android:textColor="#1E1E1E"
                             android:textStyle="bold"
                             android:textSize="14sp" />
 
@@ -249,6 +301,7 @@
                             android:layout_height="wrap_content"
                             android:text="Quantity"
                             android:gravity="end"
+                            android:textColor="#1E1E1E"
                             android:textStyle="bold"
                             android:textSize="14sp" />
                     </TableRow>
@@ -260,12 +313,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Pork Katsudon"
+                            android:textColor="#636366"
                             android:textSize="14sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x1"
+                            android:textColor="#636366"
                             android:gravity="end"
                             android:textSize="14sp" />
                     </TableRow>
@@ -277,6 +332,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Red Ice Tea"
+                            android:textColor="#636366"
                             android:textSize="14sp" />
 
                         <TextView
@@ -284,6 +340,7 @@
                             android:layout_height="wrap_content"
                             android:text="x6"
                             android:gravity="end"
+                            android:textColor="#636366"
                             android:textSize="14sp" />
                     </TableRow>
                 </TableLayout>

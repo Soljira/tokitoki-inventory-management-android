@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="150dp"
+        android:layout_width="50dp"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
@@ -119,7 +119,7 @@
                 tools:ignore="HardcodedText"/>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/RestockBtn"
+                android:id="@+id/btnRestock"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_alignParentBottom="true"
@@ -127,6 +127,7 @@
                 android:text="Restock"
                 android:textAlignment="center"
                 android:textSize="15sp"
+                android:textColor="@color/white"
                 android:fontFamily="@font/switzer_semibold"
                 android:background="@drawable/button_round_corners"
                 app:backgroundTint="#141C24"
@@ -185,7 +186,7 @@
                 tools:ignore="HardcodedText"/>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/showOrdersBtn"
+                android:id="@+id/btnShowRecentOrder"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_alignParentBottom="true"
@@ -214,7 +215,7 @@
         tools:ignore="HardcodedText"/>
 
     <TextView
-        android:id="@+id/showAllTxt"
+        android:id="@+id/btnShowAllShipments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/linear"
@@ -303,6 +304,7 @@
             android:layout_marginBottom="25dp"
             android:textAlignment="center"
             android:textSize="15sp"
+            android:textColor="@color/white"
             android:fontFamily="@font/switzer_semibold"
             android:background="@drawable/button_round_corners"
             app:backgroundTint="#141C24"

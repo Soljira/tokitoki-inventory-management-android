@@ -16,6 +16,7 @@
         android:baselineAligned="false">
 
         <ImageView
+            android:id="@+id/btnBack"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="20dp"
@@ -42,13 +43,13 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_below="@id/linear"
-        android:entries="@array/sort_options"
+        android:entries="@array/sort_options_stock_overview"
         android:prompt="@string/sort_by_prompt"
         android:minHeight="48dp"
         android:background="@drawable/spinner_border"/>
 
     <LinearLayout
-        android:id="@+id/linearStock"
+        android:id="@+id/stockItem0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/spinner_sort"
@@ -177,7 +178,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/addRecipeBtn"
+        android:id="@+id/addItemBtn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
@@ -186,6 +187,7 @@
         android:layout_marginBottom="100dp"
         android:text="Add Item"
         android:textSize="15sp"
+        android:textColor="@color/white"
         android:fontFamily="@font/switzer_semibold"
         android:background="@drawable/button_round_corners"
         app:backgroundTint="#141C24" />

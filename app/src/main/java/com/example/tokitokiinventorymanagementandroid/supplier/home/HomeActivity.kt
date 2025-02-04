@@ -10,11 +10,20 @@ import com.example.tokitokiinventorymanagementandroid.LoginActivity
 import com.example.tokitokiinventorymanagementandroid.R
 import com.google.firebase.Firebase
 import com.google.firebase.auth.auth
+import android.app.Dialog
+import android.view.Gravity
+import android.view.Window
+import android.view.ViewGroup
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.supplier_home)
+
+        startActivity(Intent (this,Popups::class.java))
 
         // TODO: Turn these authentication code into a helper class
         val auth = Firebase.auth
@@ -34,4 +43,6 @@ class HomeActivity : AppCompatActivity() {
             finish()
         }
     }
+
+
 }

@@ -6,6 +6,10 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:windowMinWidthMinor">80%</item>
     </style>
 
     <style name="MySuperAppTheme"></style>
@@ -23,6 +27,13 @@
         <item name="itemRippleColor">@color/tokiRed</item>
         <item name="labelVisibilityMode">labeled</item>
         <item name="elevation">8dp</item>
+    </style>
+
+    <style name="CustomDialog" parent="Theme.AppCompat">
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:windowMinWidthMinor">80%</item>
     </style>
 
 

@@ -16,6 +16,7 @@
         android:baselineAligned="false">
 
         <ImageView
+            android:id="@+id/btnBack"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="20dp"
@@ -180,7 +181,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_below="@id/recipeUsedText"
-        android:entries="@array/sort_options"
+        android:entries="@array/sort_options_stock_add_inventory_item"
         android:prompt="@string/sort_by_prompt"
         android:minHeight="48dp"
         android:background="@drawable/spinner_border"/>
@@ -194,6 +195,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:text="Done"
+        android:textColor="@color/white"
         android:textSize="15sp"
         android:fontFamily="@font/switzer_semibold"
         android:background="@drawable/button_round_corners"

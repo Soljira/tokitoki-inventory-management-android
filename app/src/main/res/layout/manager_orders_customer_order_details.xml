@@ -13,6 +13,7 @@
         android:text="Order Details"
         android:textStyle="bold"
         android:textSize="18sp"
+        android:textColor="#141C24"
         android:paddingBottom="8dp"/>
 
     <LinearLayout
@@ -39,6 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Order No: 1234"
+                android:textColor="#141C24"
                 android:textStyle="bold"
                 android:textSize="16sp"/>
         </LinearLayout>
@@ -53,12 +55,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Date Ordered"
+                android:textColor="#1E1E1E"
                 android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10-26-2024 13:37 PM"
+                android:textColor="#636366"
                 android:layout_weight="1"
                 android:gravity="end"/>
         </TableRow>
@@ -74,11 +78,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Order/s"
+                    android:textColor="#1E1E1E"
                     android:textStyle="bold"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Quantity"
+                    android:textColor="#1E1E1E"
                     android:textStyle="bold"
                     android:gravity="end"/>
             </TableRow>
@@ -87,11 +93,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#636366"
                     android:text="Chicken Oyakodon Supreme"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="x5"
+                    android:textColor="#636366"
                     android:gravity="end"/>
             </TableRow>
 
@@ -99,8 +107,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Special Request: No chicken"
-                    android:textColor="#777777"
+                    android:text="Special Request:"
+                    android:textColor="#1E1E1E"
+                    android:textStyle="bold"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No chicken"
+                    android:textColor="#636366"
+                    android:gravity="end"
                     android:textSize="12sp"/>
             </TableRow>
 
@@ -108,11 +124,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#636366"
                     android:text="Pork Katsudon"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="x1"
+                    android:textColor="#636366"
                     android:gravity="end"/>
             </TableRow>
 
@@ -120,8 +138,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Special Request: N/A"
-                    android:textColor="#777777"
+                    android:text="Special Request:"
+                    android:textColor="#1E1E1E"
+                    android:textStyle="bold"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:textColor="#636366"
+                    android:gravity="end"
                     android:textSize="12sp"/>
             </TableRow>
 
@@ -129,11 +155,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#636366"
                     android:text="Red Ice Tea"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="x6"
+                    android:textColor="#636366"
                     android:gravity="end"/>
             </TableRow>
 
@@ -141,8 +169,16 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Special Request: No ice"
-                    android:textColor="#777777"
+                    android:text="Special Request:"
+                    android:textColor="#1E1E1E"
+                    android:textStyle="bold"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No ice"
+                    android:textColor="#636366"
+                    android:gravity="end"
                     android:textSize="12sp"/>
             </TableRow>
         </TableLayout>
@@ -153,7 +189,7 @@
         android:layout_weight="1"/>
 
     <Button
-        android:id="@+id/closeButton"
+        android:id="@+id/btnClose"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Close"
