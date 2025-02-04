@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.tokitokiinventorymanagementandroid.supplier.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

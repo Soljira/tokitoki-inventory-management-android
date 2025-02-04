@@ -55,7 +55,11 @@
         <activity android:name=".manager.recipes.AddRecipe"/>
         <activity android:name=".manager.recipes.EditRecipe"/>
 
+        <activity android:name=".manager.settings.ManagerSettingsActivity"/>
+
         <activity android:name=".supplier.home.HomeActivity" />
+        <activity android:name=".supplier.home.SupplierProcessConfirmedActivity" />
+        <activity android:name=".supplier.home.Popups" />
 
     </application>
 
