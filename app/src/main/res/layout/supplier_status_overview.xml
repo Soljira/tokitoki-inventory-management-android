@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Back"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_toEndOf="@+id/back"
+            android:text="Supplier"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="5dp"
+        android:text="Low stock and no delivery requested"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <LinearLayout
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.23"
+            android:background="@drawable/table_bg_red_left"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text="Item"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/table_bg_red_right"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text="Quantity"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heading">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:stretchColumns="0,1">
+
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/table_border"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="Tofu"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:background="@drawable/table_border"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="1 kg"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/table_border"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="Soy Sauce"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:background="@drawable/table_border"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="2 L"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/table_border"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="Onion"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:background="@drawable/table_border"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="5 kg"
+                    android:textColor="@color/black" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/table_border"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="Pepper"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:background="@drawable/table_border"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="50 g"
+                    android:textColor="@color/black" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll">
+
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="On-going Deliveries"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btn_showall"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical|end"
+            android:padding="0dp"
+            android:text="Show all"
+            android:textStyle="bold"
+            android:textColor="@color/tokiRed" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btnmanage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_lightgray"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Order ID: 1356"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="Processing"
+                    android:textColor="@color/tokiRed"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_bottom"
+                android:gravity="center"
+                android:paddingVertical="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Supplier"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="X"
+                    android:textColor="@color/tokiGray"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_bottom"
+                android:paddingVertical="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Order/s"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="Quantity"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Carrots"
+                    android:textColor="@color/tokiGray"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="50 kg"
+                    android:textColor="@color/tokiGray"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_lightgray"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Order ID: 1355"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="1 Day"
+                    android:textColor="@color/tokiRed"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_bottom"
+                android:gravity="center"
+                android:paddingVertical="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Supplier"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="Y"
+                    android:textColor="@color/tokiGray"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_bottom"
+                android:paddingVertical="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Order/s"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="Quantity"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pork Belly"
+                    android:textColor="@color/tokiGray"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="50 kg"
+                    android:textColor="@color/tokiGray"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnmanage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="5dp"
+        android:backgroundTint="@color/dark_gray"
+        android:text="Manage Suppliers"
+        android:textSize="19sp"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnrequest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnrequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="5dp"
+        android:backgroundTint="@color/dark_gray"
+        android:text="Request Delivery"
+        android:textSize="19sp"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        style="@style/BottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
