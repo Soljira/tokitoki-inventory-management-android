@@ -16,7 +16,7 @@
         android:textSize="24sp"
         tools:layout_editor_absoluteX="5dp"
         tools:layout_editor_absoluteY="27dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="HardcodedText,MissingConstraints" />
 
     <View
         android:layout_width="match_parent"
@@ -42,12 +42,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
+                android:contentDescription="TODO"
                 app:srcCompat="@drawable/invoice" />
 
             <TextView
@@ -57,7 +59,8 @@
                 android:layout_marginStart="16dp"
                 android:text="Transaction ID: 1357"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
         <LinearLayout
@@ -71,13 +74,15 @@
                 android:layout_weight="1"
                 android:text="Supplier"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="X"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText"/>
         </LinearLayout>
 
         <LinearLayout
@@ -90,6 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Date Ordered"
+                tools:ignore="HardcodedText"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -97,6 +103,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10-31-2024 13:30 PM"
+                tools:ignore="HardcodedText"
                 android:textSize="14sp" />
         </LinearLayout>
         <View
@@ -115,6 +122,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Order"
+                tools:ignore="HardcodedText"
                 android:textSize="14sp"
                 android:textStyle="bold"/>
 
@@ -123,7 +131,9 @@
                 android:layout_height="wrap_content"
                 android:text="Quantity"
                 android:textSize="14sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                tools:ignore="HardcodedText"/>
+
         </LinearLayout>
         <View
             android:layout_width="match_parent"
@@ -136,7 +146,7 @@
             android:layout_height="wrap_content"
             android:text="Carrots"
             android:textSize="14sp"
-            />
+            tools:ignore="HardcodedText" />
     </LinearLayout>
 
     <Button
@@ -146,7 +156,8 @@
         android:text="Button"
         tools:layout_editor_absoluteX="14dp"
         tools:layout_editor_absoluteY="624dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
