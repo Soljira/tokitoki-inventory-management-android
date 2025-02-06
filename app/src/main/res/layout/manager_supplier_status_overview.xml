@@ -210,7 +210,7 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="10dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btnmanage"
+        app:layout_constraintBottom_toTopOf="@+id/btnManage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subtitle">
@@ -444,7 +444,7 @@
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnmanage"
+        android:id="@+id/btnManage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
@@ -454,12 +454,12 @@
         android:textColor="@color/white"
         android:textSize="19sp"
         app:cornerRadius="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnrequest"
+        app:layout_constraintBottom_toTopOf="@+id/btnRequest"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnrequest"
+        android:id="@+id/btnRequest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"

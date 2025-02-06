@@ -1,7 +1,9 @@
 package com.example.tokitokiinventorymanagementandroid.manager.supplier
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tokitokiinventorymanagementandroid.R
 import com.example.tokitokiinventorymanagementandroid.helpers.BottomNavigationInitialization
@@ -20,6 +22,17 @@ class SupplierActivity : AppCompatActivity() {
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
         BottomNavigationInitialization.setupBottomNavigation(this, bottomNavigationView)
         bottomNavigationView.selectedItemId = R.id.navbar_manager_supplier
+
+        val btnManageSuppliers = findViewById<Button>(R.id.btnManage)
+        val btnRequest = findViewById<Button>(R.id.btnRequest)
+
+        btnManageSuppliers.setOnClickListener {
+            startActivity(Intent(this, SupplierManageSuppliers::class.java))
+        }
+
+        btnRequest.setOnClickListener {
+            startActivity(Intent(this, SupplierRequestDelivery::class.java))
+        }
     }
 
     override fun onResume() {
