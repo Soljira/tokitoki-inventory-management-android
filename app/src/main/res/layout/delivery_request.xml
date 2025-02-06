@@ -15,7 +15,8 @@
         android:textColor="#000000"
         android:textSize="24sp"
         tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="27dp" />
+        tools:layout_editor_absoluteY="27dp"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:layout_width="match_parent"
@@ -23,7 +24,8 @@
         android:layout_marginVertical="8dp"
         android:background="#DADADA"
         tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="74dp" />
+        tools:layout_editor_absoluteY="74dp"
+        tools:ignore="MissingConstraints" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,7 +36,8 @@
         android:orientation="vertical"
         android:padding="16dp"
         tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="93dp">
+        tools:layout_editor_absoluteY="93dp"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -142,7 +145,8 @@
         android:layout_height="61dp"
         android:text="Button"
         tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="624dp" />
+        tools:layout_editor_absoluteY="624dp"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

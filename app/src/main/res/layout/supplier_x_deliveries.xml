@@ -10,7 +10,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="#FFFFFF"
-        android:padding="16dp">
+        android:padding="16dp"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -111,7 +112,8 @@
         android:orientation="vertical"
         android:padding="16dp"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="204dp">
+        tools:layout_editor_absoluteY="204dp"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -217,7 +219,8 @@
         android:orientation="vertical"
         android:padding="16dp"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="345dp">
+        tools:layout_editor_absoluteY="345dp"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -342,7 +345,8 @@
         android:orientation="vertical"
         android:padding="16dp"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="513dp">
+        tools:layout_editor_absoluteY="513dp"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -445,7 +449,8 @@
         android:layout_marginVertical="8dp"
         android:background="#DADADA"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="669dp" />
+        tools:layout_editor_absoluteY="669dp"
+        tools:ignore="MissingConstraints"/>
 
     <ImageView
         android:id="@+id/imageView4"
@@ -454,7 +459,8 @@
         android:foregroundGravity="center"
         app:srcCompat="@drawable/home"
         tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="678dp" />
+        tools:layout_editor_absoluteY="678dp"
+        tools:ignore="MissingConstraints"/>
 
     <ImageView
         android:id="@+id/imageView5"
@@ -462,7 +468,8 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/box"
         tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="678dp" />
+        tools:layout_editor_absoluteY="678dp"
+        tools:ignore="MissingConstraints"/>
 
     <ImageView
         android:id="@+id/imageView6"
@@ -470,7 +477,8 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/icon_frame"
         tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="681dp" />
+        tools:layout_editor_absoluteY="681dp"
+        tools:ignore="MissingConstraints"/>
 
     <ImageView
         android:id="@+id/imageView7"
@@ -478,58 +486,65 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/delivery_free"
         tools:layout_editor_absoluteX="269dp"
-        tools:layout_editor_absoluteY="678dp" />
+        tools:layout_editor_absoluteY="678dp"
+        tools:ignore="MissingConstraints"/>
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/mortar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/mortar"
         tools:layout_editor_absoluteX="353dp"
-        tools:layout_editor_absoluteY="678dp" />
+        tools:layout_editor_absoluteY="678dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/Home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Home"
         tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="706dp" />
+        tools:layout_editor_absoluteY="706dp"
+        tools:ignore="MissingConstraints"/>
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/Stock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Stock"
         tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="706dp" />
+        tools:layout_editor_absoluteY="706dp"
+        tools:ignore="MissingConstraints"/>
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/Order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Order"
         tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="703dp" />
+        tools:layout_editor_absoluteY="703dp"
+        tools:ignore="MissingConstraints"/>
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/Supplier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Supplier"
         tools:layout_editor_absoluteX="258dp"
-        tools:layout_editor_absoluteY="706dp" />
+        tools:layout_editor_absoluteY="706dp"
+        tools:ignore="MissingConstraints"/>
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/Recipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Recipe"
         tools:layout_editor_absoluteX="343dp"
-        tools:layout_editor_absoluteY="703dp" />
+        tools:layout_editor_absoluteY="703dp"
+        tools:ignore="MissingConstraints"/>
 </android.support.constraint.ConstraintLayout>
