@@ -5,25 +5,28 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:background="#FFFFFF"
+        android:orientation="vertical"
         android:padding="16dp"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_back_arrow"
-            android:contentDescription="Back" />
+                android:contentDescription="Back"
+                android:src="@drawable/ic_back_arrow" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -38,18 +41,18 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="16dp"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tab_to_receive"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
+                android:background="@drawable/tab_unselected_background"
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="8dp"
-                android:background="@drawable/tab_unselected_background"
                 android:text="To Receive"
                 android:textColor="#000000"
                 android:textSize="14sp" />
@@ -59,9 +62,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
+                android:background="@drawable/tab_selected_background"
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="8dp"
-                android:background="@drawable/tab_selected_background"
                 android:text="Delivered"
                 android:textColor="@android:color/white"
                 android:textSize="14sp" />
@@ -70,9 +73,9 @@
                 android:id="@+id/tab_cancelled"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/tab_unselected_background"
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="8dp"
-                android:background="@drawable/tab_unselected_background"
                 android:text="Cancelled"
                 android:textColor="#000000"
                 android:textSize="14sp" />
@@ -101,7 +104,6 @@
         </LinearLayout>
 
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
