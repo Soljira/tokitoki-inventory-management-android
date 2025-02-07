@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
 
     <LinearLayout
@@ -12,9 +12,13 @@
         android:background="#FFFFFF"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="16dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.003"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,7 +62,7 @@
                 android:text="To Receive"
                 android:textColor="#000000"
                 android:textSize="14sp"
-                tools:ignore="HardcodedText"/>
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/tab_delivered"
@@ -69,9 +73,9 @@
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="8dp"
                 android:text="Delivered"
-                tools:ignore="HardcodedText"
                 android:textColor="@android:color/holo_red_dark"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/tab_cancelled"
@@ -81,9 +85,9 @@
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="8dp"
                 android:text="Cancelled"
-                tools:ignore="HardcodedText"
                 android:textColor="#000000"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
         <LinearLayout
@@ -98,16 +102,16 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:contentDescription="Sort Icon"
-                tools:ignore="HardcodedText"
-                android:src="@drawable/sorting_center" />
+                android:src="@drawable/sorting_center"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sort By"
-                tools:ignore="HardcodedText"
                 android:textColor="#000000"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
     </LinearLayout>
@@ -120,9 +124,13 @@
         android:elevation="4dp"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="196dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.317"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -134,16 +142,16 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Order ID: 1975"
-                tools:ignore="HardcodedText"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Delivered"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
 
 
         </LinearLayout>
@@ -158,16 +166,16 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Supplier"
-                tools:ignore="HardcodedText"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="X"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
         <View
@@ -187,15 +195,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Order/s"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Quantity"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
         <View
@@ -214,15 +222,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Carrots"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="50 Kg"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
     </LinearLayout>
@@ -235,8 +243,11 @@
         android:elevation="4dp"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="345dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.612"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
@@ -249,16 +260,16 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Order ID: 1974"
-                tools:ignore="HardcodedText"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Delivered"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
 
 
         </LinearLayout>
@@ -273,16 +284,16 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Supplier"
-                tools:ignore="HardcodedText"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="X"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
         <View
@@ -302,15 +313,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Order/s"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Quantity"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
         <View
@@ -329,15 +340,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Soy Sauce"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="20 L"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
         <LinearLayout
@@ -350,15 +361,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Vinegar"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="20 L"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
     </LinearLayout>
@@ -371,8 +382,12 @@
         android:elevation="4dp"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="513dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.903"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
@@ -385,16 +400,16 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Order ID: 1973"
-                tools:ignore="HardcodedText"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Delivered"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
 
 
         </LinearLayout>
@@ -409,16 +424,16 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Supplier"
-                tools:ignore="HardcodedText"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="X"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
         <View
@@ -438,15 +453,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Order/s"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Quantity"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
         <View
@@ -465,121 +480,30 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Garlic"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="20 Kg"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
     </LinearLayout>
 
-    <View
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        style="@style/BottomNavigationView"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginVertical="8dp"
-        android:background="#DADADA"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="669dp"
-        tools:ignore="MissingConstraints"/>
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:foregroundGravity="center"
-        app:srcCompat="@drawable/home"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="678dp"
-        tools:ignore="ContentDescription,MissingConstraints"/>
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/box"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="678dp"
-        tools:ignore="ContentDescription,MissingConstraints"/>
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/icon_frame"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="681dp"
-        tools:ignore="ContentDescription,MissingConstraints"/>
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/delivery_free"
-        tools:layout_editor_absoluteX="269dp"
-        tools:layout_editor_absoluteY="678dp"
-        tools:ignore="ContentDescription,MissingConstraints"/>
-
-    <ImageView
-        android:id="@+id/mortar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/mortar"
-        tools:layout_editor_absoluteX="353dp"
-        tools:layout_editor_absoluteY="678dp"
-        tools:ignore="ContentDescription,MissingConstraints" />
-
-    <TextView
-        android:id="@+id/Home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Home"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="706dp"
-        tools:ignore="HardcodedText,MissingConstraints"/>
-
-    <TextView
-        android:id="@+id/Stock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Stock"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="706dp"
-        tools:ignore="HardcodedText,MissingConstraints"/>
-
-    <TextView
-        android:id="@+id/Order"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Order"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="703dp"
-        tools:ignore="HardcodedText,MissingConstraints"/>
-
-    <TextView
-        android:id="@+id/Supplier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Supplier"
-        tools:layout_editor_absoluteX="258dp"
-        tools:layout_editor_absoluteY="706dp"
-        tools:ignore="HardcodedText,MissingConstraints"/>
-
-    <TextView
-        android:id="@+id/Recipe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Recipe"
-        tools:layout_editor_absoluteX="343dp"
-        tools:layout_editor_absoluteY="703dp"
-        tools:ignore="HardcodedText,MissingConstraints"/>
-</android.support.constraint.ConstraintLayout>
+        android:background="@color/white"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

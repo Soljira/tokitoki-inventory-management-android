@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,17 +13,23 @@
         android:text="Confirm Delivery Request"
         android:textColor="#000000"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="27dp"
-        tools:ignore="HardcodedText,MissingConstraints" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteX="-1dp" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginVertical="8dp"
         android:background="#DADADA"
-        tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="74dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.106"
         tools:ignore="MissingConstraints" />
 
     <LinearLayout
@@ -35,8 +40,12 @@
         android:elevation="4dp"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="93dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.182"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
@@ -83,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:text="X"
                 android:textSize="14sp"
-                tools:ignore="HardcodedText"/>
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
         <LinearLayout
@@ -96,17 +105,18 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Date Ordered"
-                tools:ignore="HardcodedText"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10-31-2024 13:30 PM"
-                tools:ignore="HardcodedText"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -123,9 +133,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Order"
-                tools:ignore="HardcodedText"
                 android:textSize="14sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -133,9 +143,10 @@
                 android:text="Quantity"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                tools:ignore="HardcodedText"/>
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -154,11 +165,13 @@
         android:id="@+id/button"
         android:layout_width="351dp"
         android:layout_height="61dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="624dp"
-        tools:ignore="HardcodedText,MissingConstraints"
-        />
+        android:text="Confirm Order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.981"
+        tools:ignore="HardcodedText,MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

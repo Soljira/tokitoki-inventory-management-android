@@ -10,10 +10,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Supplier Info"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="49dp"
         android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07"
         tools:ignore="MissingConstraints" />
 
     <LinearLayout
@@ -24,8 +28,12 @@
         android:elevation="4dp"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="95dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.209"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
@@ -199,8 +207,11 @@
         android:elevation="4dp"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="430dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.756"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
@@ -298,115 +309,28 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.069"
         app:srcCompat="@drawable/button_back"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="49dp"
         tools:ignore="MissingConstraints" />
 
-    <View
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        style="@style/BottomNavigationView"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginVertical="8dp"
-        android:background="#DADADA"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="683dp"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:foregroundGravity="center"
-        app:srcCompat="@drawable/home"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="690dp"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/box"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="690dp"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/icon_frame"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="693dp"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/delivery_free"
-        tools:layout_editor_absoluteX="271dp"
-        tools:layout_editor_absoluteY="690dp"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/mortar"
-        tools:layout_editor_absoluteX="343dp"
-        tools:layout_editor_absoluteY="690dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/Home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Home"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="718dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/Stock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Stock"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="718dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/Order"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Order"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="720dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/Supplier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Supplier"
-        tools:layout_editor_absoluteX="260dp"
-        tools:layout_editor_absoluteY="720dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/Recipe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Recipe"
-        tools:layout_editor_absoluteX="336dp"
-        tools:layout_editor_absoluteY="720dp"
-        tools:ignore="MissingConstraints" />
+        android:background="@color/white"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
