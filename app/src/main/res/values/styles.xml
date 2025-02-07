@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:windowMinWidthMinor">80%</item>
+    </style>
+
+    <style name="MySuperAppTheme"></style>
+
+    <style name="BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="menu">@menu/manager_bottom_nav</item>
+        <item name="itemIconSize">30dp</item>
+        <item name="itemPaddingTop">4dp</item>
+        <item name="itemPaddingBottom">4dp</item>
+        <item name="itemHorizontalTranslationEnabled">false</item>
+        <item name="itemBackground">@color/white</item>
+        <item name="itemIconTint">@color/navbar_icon_colors</item>
+        <item name="itemTextColor">@color/navbar_icon_colors</item>
+        <item name="itemActiveIndicatorStyle">@style/ShapeAppearance.Material3.Corner.None</item>
+        <item name="itemRippleColor">@color/tokiRed</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="elevation">8dp</item>
+    </style>
+
+    <style name="CustomDialog" parent="Theme.AppCompat">
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:windowMinWidthMinor">80%</item>
+    </style>
+
+
+</resources>

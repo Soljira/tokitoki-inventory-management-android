@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sort_options_stock_add_inventory_item">
+        <item>Sort by Time</item>
+        <item>Sort by Order Number</item>
+    </string-array>
+
+    <string-array name="sort_options_stock_overview">
+        <item>Item Name</item>
+        <item>Expiration Date</item>
+    </string-array>
+
+    <string-array name="sort_options_orders_customer_orders">
+        <item>Order No.</item>
+        <item>Time Ordered</item>
+    </string-array>
+
+    <string-array name="sort_options_supplier_all_deliveries">
+        <item>Order ID</item>
+        <item>Date and Time Ordered</item>
+        <item>Supplier</item>
+    </string-array>
+</resources>

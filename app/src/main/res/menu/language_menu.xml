@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/language_english"
+        android:title="English" />
+    <item
+        android:id="@+id/language_filipino"
+        android:title="Filipino" />
+</menu>

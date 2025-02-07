@@ -31,6 +31,14 @@ android {
             )
         }
     }
+    buildFeatures {
+        viewBinding = true
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -46,21 +54,34 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.cardview.v7)
-    implementation(libs.constraint.layout)
+//    implementation(libs.androidx.library)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    // Import the Firebase BoM
-    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
 
+    implementation("androidx.databinding:databinding-runtime:8.8.0")
+    implementation("androidx.databinding:databinding-common:8.8.0")
+
+    /* Firebase stuff */
+    implementation(platform("com.google.firebase:firebase-bom:33.8.0"))  // Import the Firebase BoM (Bill of Materials)
+    implementation("com.google.firebase:firebase-auth-ktx")
+    implementation("com.google.firebase:firebase-firestore-ktx")
+    implementation("com.google.firebase:firebase-database-ktx")
 
 
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation("com.google.gms:google-services:4.4.2")
+    implementation("com.google.android.material:material:1.8.0")
 
 //    implementation("io.ktor:ktor-server-core:3.0.3")
 //    implementation("io.ktor:ktor-server-netty:3.0.3")
+}
+
+configurations.all {
+    resolutionStrategy {
+        force("androidx.databinding:databinding-runtime:8.8.0")
+        force("androidx.databinding:databinding-common:8.8.0")
+    }
 }

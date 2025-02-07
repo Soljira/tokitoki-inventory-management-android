@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:baselineAligned="false">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/back" />
+
+        <TextView
+            android:id="@+id/stockDetailsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Stock Details"
+            android:textSize="25sp"
+            android:textColor="#141C24"
+            android:fontFamily="@font/switzer_bold"/>
+    
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearStock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:baselineAligned="false">
+
+    <ImageView
+        android:id="@+id/stockImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/carrots"
+        android:background="#f8f8f8"/>
+
+    <RelativeLayout
+            android:id="@+id/stockDetails"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/itemID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item ID: 22"
+                android:textSize="20sp"
+                android:textColor="#141C24"
+                android:fontFamily="@font/switzer_bold"/>
+
+            <TextView
+                android:id="@+id/itemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/itemID"
+                android:layout_marginTop="0dp"
+                android:text="Item Name"
+                android:textColor="#636366"
+                android:fontFamily="@font/switzer_medium"/>
+
+            <TextView
+                android:id="@+id/itemIDData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/itemID"
+                android:layout_marginTop="0dp"
+                android:text="Carrots"
+                android:textColor="#636366"
+                android:fontFamily="@font/switzer_regular"/>
+
+            <TextView
+                android:id="@+id/quantityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/itemName"
+                android:layout_marginTop="0dp"
+                android:text="Quantity"
+                android:textColor="#636366"
+                android:fontFamily="@font/switzer_medium"/>
+
+            <TextView
+                android:id="@+id/quantityAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/itemName"
+                android:layout_marginTop="0dp"
+                android:text="40 kg"
+                android:textColor="#636366"
+                android:fontFamily="@font/switzer_regular"/>
+
+            <TextView
+                android:id="@+id/expirationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quantityText"
+                android:layout_marginTop="0dp"
+                android:text="Expiration Date"
+                android:textColor="#636366"
+                android:fontFamily="@font/switzer_medium"/>
+
+            <TextView
+                android:id="@+id/expirationDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/quantityText"
+                android:layout_marginTop="0dp"
+                android:text="10-22-24"
+                android:textColor="#636366"
+                android:fontFamily="@font/switzer_regular"/>
+
+        <Button
+            android:id="@+id/deleteBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:text="Recipe Used"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/switzer_semibold"
+            android:background="@drawable/button_round_corners"
+            app:backgroundTint="#DC242C" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/restockLogText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearStock"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Restock Log"
+        android:textSize="15sp"
+        android:textColor="#1E1E1E"
+        android:fontFamily="@font/switzer_semibold"/>
+
+    <RelativeLayout
+        android:id="@+id/restockLogLayout"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_below="@+id/restockLogText"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:background="@drawable/card_round_corners">
+
+        <TextView
+            android:id="@+id/orderID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order ID: 1356"
+            android:textSize="16sp"
+            android:textColor="#141C24"
+            android:fontFamily="@font/switzer_bold"/>
+
+        <ImageView
+            android:id="@+id/stockIcon"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentEnd="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_stock"
+            android:background="#f8f8f8"/>
+
+        <TextView
+            android:id="@+id/supplierName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/orderID"
+            android:layout_marginTop="5dp"
+            android:text="Supplier X"
+            android:textColor="#1e1e1e"
+            android:fontFamily="@font/switzer_medium"/>
+
+        <TextView
+            android:id="@+id/stockAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/orderID"
+            android:layout_marginTop="5dp"
+            android:text="50 kg"
+            android:textColor="#1e1e1e"
+            android:fontFamily="@font/switzer_medium"/>
+
+        <RelativeLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/stockAmount"
+            android:layout_marginTop="5dp"
+            android:background="#d9d9d9"/>
+
+        <TextView
+            android:id="@+id/dateDeliveredText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/line1"
+            android:layout_marginTop="5dp"
+            android:text="Date Delivered"
+            android:textColor="#636366"
+            android:fontFamily="@font/switzer_regular"/>
+
+
+        <TextView
+            android:id="@+id/dateDelivered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/line1"
+            android:layout_marginTop="5dp"
+            android:text="10-22-2024"
+            android:textColor="#636366"
+            android:fontFamily="@font/switzer_regular"/>
+
+        <TextView
+            android:id="@+id/dateExpirationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/dateDelivered"
+            android:text="Date Expiration"
+            android:textColor="#636366"
+            android:fontFamily="@font/switzer_regular"/>
+
+
+        <TextView
+            android:id="@+id/dateExpiration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/dateDelivered"
+            android:text="10-30-2024"
+            android:textColor="#636366"
+            android:fontFamily="@font/switzer_regular"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
