@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.tokitokiinventorymanagementandroid.LoginActivity
 import com.example.tokitokiinventorymanagementandroid.R
 import com.example.tokitokiinventorymanagementandroid.helpers.BottomNavigationInitialization
-import com.example.tokitokiinventorymanagementandroid.manager.TestRequest
+//import com.example.tokitokiinventorymanagementandroid.manager.TestRequest
 import com.example.tokitokiinventorymanagementandroid.manager.orders.OrdersCustomerOrderDetails
 import com.example.tokitokiinventorymanagementandroid.manager.settings.ManagerSettingsActivity
 import com.example.tokitokiinventorymanagementandroid.manager.stock.StockActivity

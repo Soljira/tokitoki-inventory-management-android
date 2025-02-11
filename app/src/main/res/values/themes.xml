@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.TokiTokiInventoryManagementAndroid" parent="Theme.Material3.Light.NoActionBar">
+    <style name="Base.Theme.TokiTokiInventoryManagementAndroid" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
@@ -8,7 +8,6 @@
     <style name="Theme.TokiTokiInventoryManagementAndroid" parent="Base.Theme.TokiTokiInventoryManagementAndroid" />
 
     <style name="Theme.MediBook" parent="Base.Theme.TokiTokiInventoryManagementAndroid" />
-
     <style name="Base.Theme.TextInputEditText.Outlined" parent="">
         <item name="colorPrimary">#d9d9d9</item>
         <item name="android:statusBarColor">#d9d9d9</item>
