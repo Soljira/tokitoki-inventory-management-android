@@ -50,12 +50,17 @@
 
         <activity android:name=".manager.supplier.SupplierActivity"/>
         <activity android:name=".manager.supplier.SupplierAllDeliveries"/>
+        <activity android:name=".manager.supplier.SupplierManageSuppliers"/>
+        <activity android:name=".manager.supplier.SupplierRequestDelivery"/>
 
         <activity android:name=".manager.recipes.RecipeActivity"/>
         <activity android:name=".manager.recipes.AddRecipe"/>
         <activity android:name=".manager.recipes.EditRecipe"/>
 
         <activity android:name=".manager.settings.ManagerSettingsActivity"/>
+
+
+
 
         <activity android:name=".supplier.home.HomeActivity" />
         <activity android:name=".supplier.home.SupplierProcessConfirmedActivity" />
